@@ -3,8 +3,8 @@ import shutil
 from tqdm import tqdm
 
 
-data_root = '/home-ssd/Users/nsgm_lx/wushihan/Datasets/tensorflow_datasets/libero-vqa-all/object_infos'
-save_root = '/home-ssd/Users/nsgm_lx/wushihan/Datasets/tensorflow_datasets/libero-vqa-all/merged_object_infos'
+data_root = '/your/object_info/root'
+save_root = '/your/save/root'
 os.makedirs(save_root, exist_ok=True)
 
 for data_name in os.listdir(data_root):

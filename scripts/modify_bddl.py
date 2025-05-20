@@ -1,7 +1,7 @@
 import os
 
 
-bddl_root = '/home/wushihan/data/Codes/openvla-mini/LIBERO/libero/libero/bddl_files/libero_object'
+bddl_root = '/your/libero/bddl/root'
 
 for filename in os.listdir(bddl_root):
     if not filename.endswith('.bddl'):

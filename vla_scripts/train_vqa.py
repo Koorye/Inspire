@@ -87,7 +87,7 @@ class TrainConfig:
     # Tracking Parameters
     trackers: Tuple[str, ...] = ("jsonl", )                        # Trackers to initialize (if W&B, add config!)
     wandb_project: str = "minivla"                                  # Name of W&B project to log to (use default!)
-    wandb_entity: str = "koorye-uestc"                          # Name of entity to log under
+    wandb_entity: str = "username"                          # Name of entity to log under
 
     def __post_init__(self) -> None:
         """Lift optimization parameters from `self.vla` for ease of use =>> validate on `expected_world_size`"""
