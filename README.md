@@ -8,7 +8,7 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ## News
 
-- [2025/5/15] The code is released.
+- [2025/5/20] The code is released.
 
 ## Introduction
 
@@ -82,10 +82,8 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 | MiniVLA | Libero90 | [Download]() |
 | InspireVLA | Libero90 | [Download]() |
 | InspireVLA | Libero10+Goal+Object+Spatial | [Download]() |
-| FAST | Libero90 | [Download]() |
-| InspireVLA-FAST | Libero90 | [Download]() |
 
-## Running
+## Installation
 
 1. Clone the repository.
 
@@ -107,18 +105,33 @@ ninja --version; echo $?  # Verify Ninja --> should return exit code "0"
 pip install "flash-attn==2.5.5" --no-build-isolation
 ```
 
-3. Prepare the dataset.
+## Evaluation with Pretrained Checkpoints
 
-See [Dataset Preparation](Dataset.md).
+1. Download pretrained checkpoints.
 
-4. Run the training script.
+TODO
+
+2. Run the evaluation script.
+
+```bash
+bash vla_scripts/eval/eval_baseline_libero90.sh
+bash vla_scripts/eval/eval_inspire_libero90.sh
+```
+
+## Training Your Own Checkpoints
+
+1. Prepare the dataset.
+
+See [Dataset Preparation](DATASET.md).
+
+2. Run the training script.
 
 ```bash
 bash vla_scripts/train/train_baseline_libero90.sh
 bash vla_scripts/train/train_inspire_libero90.sh
 ```
 
-5. Run the evaluation script.
+3. Run the evaluation script.
 
 ```bash
 bash vla_scripts/eval/eval_baseline_libero90.sh
