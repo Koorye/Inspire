@@ -1,5 +1,0 @@
-Task suite: libero_90
-
-Task: put the black bowl in the top drawer of the cabinet
-Starting episode 1...
-Caught exception: update expected at most 1 argument, got 2

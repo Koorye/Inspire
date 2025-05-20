@@ -1,5 +1,0 @@
-Task suite: libero_90
-
-Task: put the black bowl in the top drawer of the cabinet
-Starting episode 1...
-Caught exception: Libero_Kitchen_Tabletop_Manipulation._post_action() takes 1 positional argument but 2 were given

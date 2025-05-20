@@ -1,4 +1,0 @@
-Task suite: libero_90
-
-Task: put the black bowl in the top drawer of the cabinet
-Starting episode 1...
