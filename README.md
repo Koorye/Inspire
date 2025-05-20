@@ -4,7 +4,7 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 > **Note**: We are doing our best to improve this work. If you have any questions or suggestions, please feel free to create an issue in this repo or contact us at shihan.wu.koorye@outlook.com.
 
-[[Inspire-FAST]](https://github.com/InspireVLA/Inspire-FAST)
+[[Inspire-FAST]](https://github.com/Koorye/Inspire-FAST)
 
 ## News
 
@@ -90,7 +90,7 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 1. Clone the repository.
 
 ```bash
-git clone http://github/user/InspireVLA.git
+git clone https://github.com/Koorye/Inspire.git
 ```
 
 2. Install the dependencies.
@@ -108,6 +108,8 @@ pip install "flash-attn==2.5.5" --no-build-isolation
 ```
 
 3. Prepare the dataset.
+
+See [Dataset Preparation](Dataset.md).
 
 4. Run the training script.
 

@@ -95,7 +95,7 @@ class Builder(tfds.core.GeneratorBasedBuilder):
 
     def _split_generators(self, dl_manager: tfds.download.DownloadManager):
         return {
-            'train': self._generate_examples(glob.glob("/home/wushihan/data/Codes/openvla-mini/data/libero_10_no_noops/*.hdf5")),
+            'train': self._generate_examples(glob.glob("/path/to/your/dataset/libero_10_no_noops/*.hdf5")),
         }
 
     def _generate_examples(self, paths):
