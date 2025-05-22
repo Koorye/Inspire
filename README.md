@@ -1,10 +1,10 @@
 # Inspire
 
-Official implementation of the paper "[InSpire: Vision-Language-Action Models with Intrinsic Spatial Reasoning]()".
+Official implementation of the paper "[InSpire: Vision-Language-Action Models with Intrinsic Spatial Reasoning](https://arxiv.org/abs/2505.13888)".
 
 > **Note**: We are doing our best to improve this work. If you have any questions or suggestions, please feel free to create an issue in this repo or contact us at shihan.wu.koorye@outlook.com.
 
-[[Inspire-FAST]](https://github.com/Koorye/Inspire-FAST)
+[[Project]](https://Koorye.github.io/proj/Inspire/) [[ArXiv]](https://arxiv.org/abs/2505.13888) [[PDF]](https://arxiv.org/pdf/2505.13888) [[Inspire-FAST]](https://github.com/Koorye/Inspire-FAST)
 
 ## News
 
