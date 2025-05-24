@@ -8,7 +8,8 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ## News
 
-- [2025/5/20] The code is released.
+- 🔥**May 23, 2025**: Our paper has been updated for better clarity and readability. The optimized version is now available on arXiv.
+- 🔥**May 21, 2025**: The code is released and the paper is now available on arXiv.
 
 ## Introduction
 
