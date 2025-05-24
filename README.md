@@ -30,6 +30,10 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ![Real-world Environments](examples/real_results.png)
 
+## Attention Maps
+
+![Attention Maps](examples/attention.png)
+
 ## Videos
 
 ### Simulated Environments
