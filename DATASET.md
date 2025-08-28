@@ -14,12 +14,12 @@ cd libero-all
 
 wget https://utexas.box.com/shared/static/04k94hyizn4huhbv5sz4ev9p2h1p6s7f.zip # LIBERO-Spatial
 wget https://utexas.box.com/shared/static/avkklgeq0e1dgzxz52x488whpu8mgspk.zip # LIBERO-Object
-wget https://utexas.box.com/shared/static/avkklgeq0e1dgzxz52x488whpu8mgspk.zip # LIBERO-Goal
+wget https://utexas.box.com/shared/static/iv5e4dos8yy2b212pkzkpxu9wbdgjfeg.zip # LIBERO-Goal
 wget https://utexas.box.com/shared/static/cv73j8zschq8auh9npzt876fdc1akvmk.zip # LIBERO-100, including 90 and 10
 
 unzip 04k94hyizn4huhbv5sz4ev9p2h1p6s7f.zip
 unzip avkklgeq0e1dgzxz52x488whpu8mgspk.zip
-unzip avkklgeq0e1dgzxz52x488whpu8mgspk.zip
+unzip iv5e4dos8yy2b212pkzkpxu9wbdgjfeg.zip
 unzip cv73j8zschq8auh9npzt876fdc1akvmk.zip
 
 cd ..
