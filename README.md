@@ -176,4 +176,4 @@ bash vla_scripts/eval/eval_inspire_libero90.sh
 
 ## Acknowledgements
 
-Our work is built upon the following open-source projects: [CALVIN](https://github.com/mees/calvin), [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), [MiniVLA](https://github.com/Stanford-ILIAD/openvla-mini), [Pi-0](https://github.com/Physical-Intelligence/openpi). We thank the authors for releasing their code. If you use our model and code, please consider citing these works as well.
+Our work is built upon the following open-source projects: [CALVIN](https://github.com/mees/calvin), [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), [miniVLA](https://github.com/Stanford-ILIAD/openvla-mini), [Pi-0](https://github.com/Physical-Intelligence/openpi). We thank the authors for releasing their code. If you use our model and code, please consider citing these works as well.
