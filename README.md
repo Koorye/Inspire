@@ -8,6 +8,8 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ## News
 
+- 🔥**Sep 29, 2025**: CALVIN evaluation experiment results are now available.
+
 - 🔥**May 23, 2025**: Our paper has been updated for better clarity and readability. The optimized version is now available on [arXiv](https://arxiv.org/abs/2505.13888).
 - 🔥**May 21, 2025**: The code is released and the paper is now available on [arXiv](https://arxiv.org/abs/2505.13888v1).
 
@@ -22,13 +24,19 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ### Overall Performance
 
-**Simulatied Environments**
-
-![Simulated Environments](examples/libero_results.png)
-
 **Real-world Environments**
 
 ![Real-world Environments](examples/real_results.png)
+
+**LIBERO Simulated Environments**
+
+![Simulated Environments](examples/libero_results.png)
+
+**CALVIN Simulated Environments**
+
+<img src="examples/calvin1.png" alt="CALVIN Results" width="50%"/><img src="examples/calvin2.png" alt="CALVIN Results" width="50%"/>
+
+<img>
 
 ## Attention Maps
 
@@ -74,6 +82,15 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 | ![Libero-Goal Bowl Plate](examples/videos/main/libero/baseline/goal_bowl_plate.gif) | ![Libero-Object Cheese Basket](examples/videos/main/libero/baseline/object_cheese_basket.gif) | ![Libero-Spatial Bowl Plate](examples/videos/main/libero/baseline/spatial_bowl_plate.gif) | ![Libero-10 Book Caddy](examples/videos/main/libero/baseline/10_book_caddy.gif) |
 | **InSpire:<br>Bowl Plate** | **InSpire:<br>Cheese Basket** | **InSpire:<br>Bowl Plate** | **InSpire:<br>Book Caddy** |
 | ![Libero-Goal Bowl Plate](examples/videos/main/libero/inspire/goal_bowl_plate.gif) | ![Libero-Object Cheese Basket](examples/videos/main/libero/inspire/object_cheese_basket.gif) | ![Libero-Spatial Bowl Plate](examples/videos/main/libero/inspire/spatial_bowl_plate.gif) | ![Libero-10 Book Caddy](examples/videos/main/libero/inspire/10_book_caddy.gif) |
+
+## CALVIN Simulated Environments
+
+**ABC -> D**
+
+| miniVLA | InSpire | 
+| :-------------------------:|:-------------------------:|
+| ![](examples/videos/main/calvin/seq7_success0.gif) | ![](examples/videos/main/calvin/seq7_success5.gif) |
+| ![](examples/videos/main/calvin/seq179_success0.gif) | ![](examples/videos/main/calvin/seq179_success5.gif) |
 
 ## Models Checkpoints
 
