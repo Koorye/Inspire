@@ -7,7 +7,6 @@ import mdx from '@mdx-js/rollup'
 import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
-import rehypeMathjax from 'rehype-mathjax';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,7 +20,6 @@ export default defineConfig({
       ],
       rehypePlugins: [
         rehypeKatex,
-        // rehypeMathjax,
       ],
     }),
   ],
