@@ -25,7 +25,7 @@ export default defineConfig({
       ],
     }),
   ],
-  base:'/proj/Inspire/',
+  base:'/Inspire/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
