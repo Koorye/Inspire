@@ -23,79 +23,80 @@ const btn_color = '#000000'
 
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
-  // {
-  //   name: "Ji Zhang",
-  //   homepage: "https://github.com",
-  //   address_flag: "1*"
-  // },
-  // {
-  //   name: "Shihan Wu",
-  //   homepage: "https://Koorye.github.io/",
-  //   address_flag: "2*"
-  // },
-  // {
-  //   name: "Xu Luo",
-  //   homepage: "https://github.com",
-  //   address_flag: "2"
-  // },
-  // {
-  //   name: "Hao Wu",
-  //   homepage: "https://github.com",
-  //   address_flag: "2"
-  // },
-  // {
-  //   name: "Lianli Gao",
-  //   homepage: "https://github.com",
-  //   address_flag: "2"
-  // },
-  // {
-  //   name: "Heng Tao Shen",
-  //   homepage: "https://github.com",
-  //   address_flag: "3"
-  // },
-  // {
-  //   name: "Jingkuan Song",
-  //   homepage: "https://github.com",
-  //   address_flag: "3†"
-  // },
-  // {
-  //   name: "Anonoymous Author",
-  //   homepage: "https://github.com",
-  //   address_flag: "1"
-  // },
+  {
+    name: "Ji Zhang",
+    homepage: "https://github.com",
+    address_flag: "1*"
+  },
+  {
+    name: "Shihan Wu",
+    homepage: "https://Koorye.github.io/",
+    address_flag: "2*"
+  },
+  {
+    name: "Xu Luo",
+    homepage: "https://github.com",
+    address_flag: "2"
+  },
+  {
+    name: "Hao Wu",
+    homepage: "https://github.com",
+    address_flag: "2"
+  },
+  {
+    name: "Lianli Gao",
+    homepage: "https://github.com",
+    address_flag: "2"
+  },
+  {
+    name: "Heng Tao Shen",
+    homepage: "https://github.com",
+    address_flag: "3"
+  },
+  {
+    name: "Jingkuan Song",
+    homepage: "https://github.com",
+    address_flag: "3†"
+  },
+  {
+    name: "Anonoymous Author",
+    homepage: "https://github.com",
+    address_flag: "1"
+  },
 ]
 
 // 地址清单（包含地址名称、头像、主页、地址序号）
 const addresses = [
-  // {
-  //   address_flag: "1",
-  //   name: "Southwest Jiaotong University",
-  //   homepage: "https://github.com",
-  //   // icon: "./icons/sjtu.jpg"
-  // },
-  // {
-  //   address_flag: "2",
-  //   name: "University of Electronic Science and Technology of China",
-  //   homepage: "https://github.com",
-  //   // icon: "./icons/uestc.jpg"
-  // },
-  // {
-  //   address_flag: "3",
-  //   name: "Tongji University",
-  //   homepage: "https://github.com",
-  //   // icon: "./icons/tju.jpg"
-  // },
-  // {
-  //   address_flag: "1",
-  //   name: "Anonymous Institution",
-  //   homepage: "https://github.com",
-  // },
+  {
+    address_flag: "1",
+    name: "Southwest Jiaotong University",
+    homepage: "https://github.com",
+    // icon: "./icons/sjtu.jpg"
+  },
+  {
+    address_flag: "2",
+    name: "University of Electronic Science and Technology of China",
+    homepage: "https://github.com",
+    // icon: "./icons/uestc.jpg"
+  },
+  {
+    address_flag: "3",
+    name: "Tongji University",
+    homepage: "https://github.com",
+    // icon: "./icons/tju.jpg"
+  },
+  {
+    address_flag: "1",
+    name: "Anonymous Institution",
+    homepage: "https://github.com",
+  },
 ]
 
 // 共一和通讯提示
 const con_and_corresponding_author = "*Equal Contribution  †Corresponding author"
 
 const news = [
+  "🔥Feb 1, 2026: 🎉🎉Our paper has been accepted by ICRA 2026!🎉🎉",
   "🔥Sep 29, 2025: CALVIN evaluation results are now available.",
   "🔥May 23, 2025: Our paper has been updated for better clarity and readability. The optimized version is now available on arXiv.",
   "🔥May 21, 2025: The paper is now available on arXiv."
@@ -107,24 +108,24 @@ const emphases = [
 
 // 提供引导资料链接
 const buttons = [
-  // {
-  //   disabled: false,
-  //   name: "ArXiv",
-  //   link: "https://arxiv.org/abs/2505.13888",
-  //   component: Link,
-  // },
-  // {
-  //   disabled: false,
-  //   name: "PDF",
-  //   link: "https://arxiv.org/pdf/2505.13888",
-  //   component: Document,
-  // },
-  // {
-  //   disabled: false,
-  //   name: "Code",
-  //   link: "https://github.com/Koorye/Inspire",
-  //   component: Link,
-  // }
+  {
+    disabled: false,
+    name: "ArXiv",
+    link: "https://arxiv.org/abs/2505.13888",
+    component: Link,
+  },
+  {
+    disabled: false,
+    name: "PDF",
+    link: "https://arxiv.org/pdf/2505.13888",
+    component: Document,
+  },
+  {
+    disabled: false,
+    name: "Code",
+    link: "https://github.com/Koorye/Inspire",
+    component: Link,
+  }
 ]
 
 </script>
@@ -133,14 +134,14 @@ const buttons = [
   <div>
 
     <!-- 最新消息提示 -->
-    <!-- <el-row justify="center">
+    <el-row justify="center">
       <el-col :span="24">
         <el-row class="news-box" justify="center" v-for="(item, index) in news">
           <el-alert v-if="index == 0" :title="item" type="error" />
           <el-alert v-if="index > 0" :title="item" type="info" />
         </el-row>
       </el-col>
-    </el-row> -->
+    </el-row>
 
     <!-- 文章logo -->
     <el-row v-if="logo" justify="center">
