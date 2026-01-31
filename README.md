@@ -8,8 +8,8 @@ Official implementation of the paper "[InSpire: Vision-Language-Action Models wi
 
 ## News
 
+- 🔥**Feb 1, 2026**: 🎉🎉Our paper has been accepted by **ICRA 2026**!🎉🎉
 - 🔥**Sep 29, 2025**: CALVIN evaluation experiment results are now available.
-
 - 🔥**May 23, 2025**: Our paper has been updated for better clarity and readability. The optimized version is now available on [arXiv](https://arxiv.org/abs/2505.13888).
 - 🔥**May 21, 2025**: The code is released and the paper is now available on [arXiv](https://arxiv.org/abs/2505.13888v1).
 
