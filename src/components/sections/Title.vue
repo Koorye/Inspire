@@ -104,6 +104,7 @@ const news = [
 
 // 强调内容
 const emphases = [
+  "🎉🎉Our paper has been accepted by ICRA 2026!🎉🎉"
 ]
 
 // 提供引导资料链接
