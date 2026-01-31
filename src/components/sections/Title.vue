@@ -183,9 +183,9 @@ const buttons = [
     </el-row>
 
     <!-- 共一和通讯提示内容 -->
-    <!-- <el-row justify="center" class="con-cor">
+    <el-row justify="center" class="con-cor">
         {{ con_and_corresponding_author }}
-    </el-row> -->
+    </el-row>
 
     <!-- 强调内容 -->
     <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
