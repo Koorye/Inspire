@@ -58,11 +58,6 @@ const authors = [
     homepage: "https://github.com",
     address_flag: "3†"
   },
-  {
-    name: "Anonoymous Author",
-    homepage: "https://github.com",
-    address_flag: "1"
-  },
 ]
 
 // 地址清单（包含地址名称、头像、主页、地址序号）
@@ -84,11 +79,6 @@ const addresses = [
     name: "Tongji University",
     homepage: "https://github.com",
     // icon: "./icons/tju.jpg"
-  },
-  {
-    address_flag: "1",
-    name: "Anonymous Institution",
-    homepage: "https://github.com",
   },
 ]
 
