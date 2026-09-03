@@ -15,12 +15,6 @@ const title_color = '#000000'
 // 标题补充，没有则置为''即可
 const title_supp = 'with Intrinsic Spatial Reasoning'
 
-// 标题补充颜色
-const title_supp_color = '#000000'
-
-// 按钮颜色
-const btn_color = '#000000'
-
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
@@ -125,12 +119,17 @@ const buttons = [
   <div>
 
     <!-- 最新消息提示 -->
-    <el-row justify="center">
-      <el-col :span="24">
-        <el-row class="news-box" justify="center" v-for="(item, index) in news">
-          <el-alert v-if="index == 0" :title="item" type="error" />
-          <el-alert v-if="index > 0" :title="item" type="info" />
-        </el-row>
+    <el-row justify="center" class="news-list">
+      <el-col :xs="28" :sm="24" :md="20" :lg="16" :xl="14">
+        <div
+          class="news-chip"
+          v-for="(item, index) in news"
+          :key="index"
+          :class="{ highlight: index === 0 }"
+        >
+          <span class="news-dot"></span>
+          <span class="news-text">{{ item }}</span>
+        </div>
       </el-col>
     </el-row>
 
@@ -144,7 +143,7 @@ const buttons = [
       <el-col :span="20">
         <h1 class="paper-title">
           <div v-if="title" :style="{color:title_color}"> {{ title }}</div>
-          <div v-if="title_supp" :style="{color:title_supp_color}"> {{ title_supp }}</div>
+          <div v-if="title_supp" class="title-supp"> {{ title_supp }}</div>
         </h1>
       </el-col>
     </el-row>
@@ -187,7 +186,7 @@ const buttons = [
       <el-col :span="20">
         <el-row justify="center">
           <a :href=button.link v-for="button in buttons">
-            <el-button class="guidance-button" size="default" :color="btn_color" :disabled="button.disabled" round>
+            <el-button class="guidance-button" size="default" :disabled="button.disabled" round>
               <el-icon :size="18">
                 <component :is="button.component" />
               </el-icon>
@@ -203,19 +202,72 @@ const buttons = [
 
 <style scoped>
 
-.news-box {
-  animation: fadeIn 0.5s ease-in-out;
-  margin: 10px;
+
+/* 最新消息胶囊列表 */
+.news-list {
+  padding-top: 24px;
+}
+
+.news-chip {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--pcd-border);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
+}
+
+.news-chip.highlight {
+  border-color: rgba(224, 82, 82, 0.35);
+  background: #fff5f5;
+}
+
+.news-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: var(--pcd-accent);
+}
+
+.news-chip.highlight .news-dot {
+  background: #e05252;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 82, 82, 0.4); }
+  50% { box-shadow: 0 0 0 5px rgba(224, 82, 82, 0); }
+}
+
+.news-text {
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--pcd-text);
+  text-align: left;
 }
 
 /* 文章标题字体、字间距、居中排布、字号 */
 .paper-title {
   font-family: 'Google Sans', sans-serif;
   font-weight: 600;
-  letter-spacing: 0px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
   font-size: 3rem;
-  margin: 32px;
+  margin: 36px;
   text-align: center;
+}
+
+/* 标题补充：渐变文字 */
+.title-supp {
+  background: linear-gradient(120deg, var(--pcd-accent), #7c5cf0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* 姓名和地址按钮 */
@@ -227,12 +279,29 @@ const buttons = [
 /* 姓名和地址按钮光标悬浮 */
 .title-button:hover {
   margin: 0px 0px;
+  color: var(--pcd-accent);
 }
 
-/* 引导材料按钮 */
+/* 引导材料按钮：品牌渐变胶囊 */
 .guidance-button {
   margin: 8px 5px;
   padding: 18px 15px;
+  border: none;
+  background: linear-gradient(120deg, var(--pcd-accent), #7c5cf0);
+  color: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.guidance-button:hover {
+  background: linear-gradient(120deg, #2b64c4, #6a4de0);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(50, 115, 220, 0.35);
+}
+
+.guidance-button:active {
+  transform: translateY(0);
+  filter: brightness(0.96);
 }
 
 /* 姓名属性 */
@@ -271,12 +340,13 @@ const buttons = [
   margin: 18px 0px;
   text-align: center;
   white-space: pre;
+  color: var(--pcd-muted);
 }
 
 /* 强调信息属性 */
 .emphasis {
   font-family: 'Google Sans', sans-serif;
-  color: chocolate;
+  color: #d97706;
   font-weight: bold;
   margin: 8px;
   font-size: 22px;
@@ -290,20 +360,27 @@ const buttons = [
   color: #ffffff;
 }
 
-.el-alert {
-  margin: 10px 0 0;
-}
-
-.el-alert:first-child {
-  margin: 0;
-}
-
 .logo {
   width: 150px; 
   height: 150px;
   border-radius: 50%;
   box-shadow: #ced3dc 0px 0px 3px 2px;
   margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .paper-title {
+    font-size: 2.1rem;
+    margin: 24px;
+  }
+
+  .news-chip {
+    border-radius: 16px;
+  }
+
+  .emphasis {
+    font-size: 18px;
+  }
 }
 
 /* 手机端链接样式处理 */

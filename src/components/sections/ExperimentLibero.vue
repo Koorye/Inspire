@@ -21,8 +21,10 @@ import experiment from '../mds/experiment_libero.mdx';
 }
 
 .caption-img {
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--pcd-border);
+    box-shadow: var(--pcd-shadow-soft);
 }
 
 .caption-text {

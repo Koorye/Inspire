@@ -1,16 +1,18 @@
 <script>
+import { CopyDocument } from '@element-plus/icons-vue'
+
 export default {
+  components: { CopyDocument },
   data() {
     return {
       bibtex: [
-        "@article{zhang2025inspire,",
+        "@inproceedings{zhang2026inspire,",
         "    title={InSpire: Vision-Language-Action Models with Intrinsic Spatial Reasoning},",
-        "    author={Zhang, Ji and Wu, Shihan and Luo, Xu and Wu, Hao and and Gao, Lianli  and Shen, Heng Tao and Song, Jingkuan},",
-        "    journal={arXiv preprint arXiv:2505.13888},",
-        "    year={2025}",
+        "    author={Zhang, Ji and Wu, Shihan and Luo, Xu and Wu, Hao and Gao, Lianli and Shen, Heng Tao and Song, Jingkuan},",
+        "    booktitle={International Conference on Robotics and Automation},",
+        "    year={2026}",
         "}",
-      ],
-    }
+      ],    }
   },
   methods: {
     copyVal() {
@@ -29,8 +31,7 @@ export default {
 </script>
 
 <template>
-  <div v-animate-onscroll="'animated fadeInUp'">
-    <el-divider />
+  <div id="citation" v-animate-onscroll="'animated fadeInUp'">
       
       <el-row justify="center">
         <h1 class="section-title">BibTeX</h1>
@@ -38,7 +39,13 @@ export default {
       
       <el-row justify="center">
         <el-col class='bibtex' :xs="28" :sm="24" :md="20" :lg="16" :xl="12" @click="copyVal()" >
-          <div style="text-align: center; color: var(--el-text-color-secondary); margin-top: 20px;">🖱️ Click here to copy BibTex.</div> 
+          <div class="bibtex-head">
+            <span class="copy-tip">Click anywhere to copy BibTeX</span>
+            <span class="copy-btn">
+              <el-icon :size="14"><CopyDocument /></el-icon>
+              Copy
+            </span>
+          </div>
           <el-row>
               <el-scrollbar style="margin: 0px 20px 5px 20px;">
                 <pre id="bibtex"><code v-for="b in bibtex">{{ b }}<br/></code></pre>
@@ -52,26 +59,64 @@ export default {
 
 <style scoped>
 
-.scrollbar-flex-content {
-  display: flex;
-}
-
 /* 卡片属性 */
 .bibtex {
   margin: 20px 0px;
   padding-top: 5px;
-  box-shadow: var(--el-box-shadow-light); 
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--pcd-border);
+  border-radius: 14px;
+  cursor: copy;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 /* 卡片悬浮 */
 .bibtex:hover {
-  box-shadow: var(--el-box-shadow); 
+  box-shadow: var(--pcd-shadow-lift);
+  transform: translateY(-2px);
 }
 
 /* 卡片点击 */
 .bibtex:active{
-  box-shadow: var(--el-box-shadow-lighter); 
+  box-shadow: var(--pcd-shadow-soft);
+}
+
+/* 卡片头部：提示 + 复制按钮 */
+.bibtex-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 0;
+}
+
+.copy-tip {
+  color: var(--pcd-muted);
+  font-family: 'Google Sans', sans-serif;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.bibtex:hover .copy-tip {
+  color: var(--pcd-accent);
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(50, 115, 220, 0.08);
+  color: var(--pcd-accent);
+  font-family: 'Google Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.bibtex:hover .copy-btn {
+  background: var(--pcd-accent);
+  color: #ffffff;
 }
 
 pre {
@@ -83,9 +128,7 @@ pre {
 
 pre code {
   font-size: 18px;
-  background: #ffffff;
+  background: none;
 }
-
-
 
 </style>

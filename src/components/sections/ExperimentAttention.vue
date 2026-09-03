@@ -19,6 +19,9 @@ import experiment from '../mds/attention.mdx';
 
 .caption-img {
     width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--pcd-border);
+    box-shadow: var(--pcd-shadow-soft);
 }
 
 .caption-text {

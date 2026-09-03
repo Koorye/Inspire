@@ -93,9 +93,14 @@ export default {
 </script>
 
 <template>
-  <el-row class="swiper-box" justify="center" v-animate-onscroll="'animated fadeInUp'">
+  <div v-animate-onscroll="'animated fadeInUp'">
+    <el-row justify="center">
+      <h1>LIBERO Demonstrations</h1>
+    </el-row>
+
+    <el-row justify="center">
     <!-- <el-col :xs="28" :sm="24" :md="20" :lg="16" :xl="12"> -->
-    <el-col :xs="32" :sm="28" :md="24" :lg="20" :xl="16">
+    <el-col :xs="28" :sm="24" :md="20" :lg="16" :xl="12" class="swiper-box">
       <!-- 设置轮播图：循环播放、首张图序号、响应式、导航和分页、自动播放 -->
       <div class="caption-text">Seen tasks LIBERO-90.</div>
       <swiper
@@ -161,22 +166,27 @@ export default {
       </swiper>
     </el-col>
   </el-row>
+  </div>
 </template>
   
 <style scoped>
 
 .swiper-box {
-  background-color: #eeeeee;
+    background-color: var(--pcd-surface);
+  border: 1px solid var(--pcd-border);
+  border-radius: 16px;
+  padding: 18px 14px;
 }
 
 /* 设置Swiper风格 */
 .swiper {
-  --swiper-theme-color: white;
+  --swiper-theme-color: var(--pcd-accent);
 }
 
 .swiper-slide-text {
   padding: 5px;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 500;
   text-align: center;
   color: #4a4a4a;
 }

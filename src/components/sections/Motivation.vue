@@ -4,7 +4,6 @@ import motivation from '../mds/motivation.mdx';
 
 <template>
   <div v-animate-onscroll="'animated fadeInUp'">
-    <el-divider />
 
     <el-row justify="center">
         <el-col :xs="28" :sm="24" :md="20" :lg="16" :xl="12">

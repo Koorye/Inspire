@@ -3,8 +3,7 @@ import method from '../mds/method.mdx';
 </script>
 
 <template>
-  <div v-animate-onscroll="'animated fadeInUp'">
-    <el-divider />
+  <div id="method" v-animate-onscroll="'animated fadeInUp'">
 
     <el-row justify="center">
         <el-col :xs="28" :sm="24" :md="20" :lg="16" :xl="12">
@@ -23,6 +22,9 @@ import method from '../mds/method.mdx';
 
 .caption-img {
     margin: 20px 0;
+    border-radius: 12px;
+    border: 1px solid var(--pcd-border);
+    box-shadow: var(--pcd-shadow-soft);
 }
 
 </style>
